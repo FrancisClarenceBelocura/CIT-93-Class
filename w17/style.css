@@ -1,0 +1,27 @@
+html {
+    font-size: 22px;
+}
+body {
+    background-color: #333;
+    color: whitesmoke;
+}
+input:in-range {
+    background-color: lightgreen;
+}
+input:out-of-range {
+    background-color: lightcoral;
+}
+table, th, td {
+    border: 1px solid;
+    padding: 5px;
+}
+tbody tr:nth-child(odd) {
+    background-color: rgb(129, 157, 118);
+}
+.error {
+    color: red;
+}
+
+#foodconveniencechoice {
+    text-align: center;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week 17 - Carbon Footprint - Pub</title>
+        <script defer type="module" src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form id="form">
+            <fieldset>
+                <legend>Input Carbon Footprint</legend>
+                <div>
+                    <label for="">First Name:</label>
+                    <input type="text" name="firstname" maxlength="20" id="firstname">
+                    <span id="firstnameError" class="error" role="alert"></span>
+                </div>
+                <div>
+                    <label for="">Last Name:</label>
+                    <input type="text" name="lastname" maxlength="20" id="lastname">
+                    <span id="lastnameError" class="error" role="alert"></span>
+                </div>
+                <div>
+                    <label for="">Number of People in Household:</label>
+                    <input type="number" name="numberofpeople" min="1" max="6" id="numberofpeople" required/>
+                </div>
+                <div>
+                    <label for="">Size of Home:</label>
+                    <select name="typeofhome" id="typeofhome" required>
+                        <option value="">---Please enter size of home---</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Food Consumption:</label>
+                    <select name="foodconsumption" id="foodconsumption" required>
+                        <option value="">-----Please enter diet type-----</option>
+                        <option value="meat (daily)">Eat meat on a daily basis</option>
+                        <option value="meat (few)">Eat meat a few times a week</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan or only eat wild meat</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Food Convenience:</label>
+                    <select name="foodconvenience" id="foodconvenience" required>
+                        <option value="" id="foodconveniencechoice">-------Please enter convenience of food-------</option>
+                        <option value="prepackaged">Eat prepackaged food</option>
+                        <option value="balanced">Eat a balance of fresh and convenience food</option>
+                        <option value="local">Eat fresh, locally grown, or hunted food</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Water Consumption:</label>
+                    <select name="dishwasher" id="dishwasher" required>
+                        <option value="" id="dishwasherchoice">---How often do you run your dishwasher/washing machine?---</option>
+                        <option value="1">1-3 times/week</option>
+                        <option value="2">4-9 times/week</option>
+                        <option value="3">>9+ times/week</option>
+                        <option value="0">I don't own a dishwasher</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Do you have both a dishwasher and washing machine?</label>
+                    <input type="checkbox" id="checkbox">
+                </div>
+                <div>
+                    <label for="">Household Purchases:</label>
+                    <select name="householdp" id="householdp" required>
+                        <option value="">---How many household purchases do you make per year?---</option>
+                        <option value="2">Almost nothing new/only secondhand items</option>
+                        <option value="4">Less than 3 items (pieces of furniture, electrotics, other gadgets)</option>
+                        <option value="6">Between 3 and 5 items</option>
+                        <option value="8">Between 5 and 7 items</option>
+                        <option value="10">More than 10 items</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Waste Produced:</label>
+                    <select name="wasteproduced" id="wasteproduced" required>
+                        <option value="">---How much trash cans do you fill up each week?---</option>
+                        <option value="5">Half a garbage bag</option>
+                        <option value="20">1 garbage bag</option>
+                        <option value="30">2 garbage bag</option>
+                        <option value="40">3 garbage bag</option>
+                        <option value="50">4 garbage bag</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Identify the amount of waste that you recycle</legend>
+                    <label>
+                        <input class="recycle" type="checkbox" id="glass" name="glass" value="glass">
+                        Glass
+                    </label>
+                    <label>
+                        <input class="recycle" type="checkbox" id="plastic" name="plastic" value="plastic">
+                        Plastic
+                    </label>
+                    <label>
+                        <input class="recycle" type="checkbox" id="paper" name="paper" value="paper">
+                        Paper
+                    </label>
+                    <label>
+                        <input class="recycle" type="checkbox" id="aluminum" name="aluminum" value="aluminum">
+                        Aluminum
+                    </label>
+                    <label>
+                        <input class="recycle" type="checkbox" id="steel" name="steel" value="steel">
+                        Steel
+                    </label>
+                    <label>
+                        <input class="recycle" type="checkbox" id="food " name="food" value="food">
+                        Food
+                    </label>
+                </fieldset>
+                <div>
+                    <label for="">Personal Vehicle Usage:</label>
+                    <select name="pvu" id="pvu" required>
+                        <option value="">---How many miles do you travel each year?---</option>
+                        <option value="0">0</option>
+                        <option value="4">Less than 1,000</option>
+                        <option value="6">Between 1,000 to 10,000</option>
+                        <option value="10">Between 10,000 to 15,000</option>
+                        <option value="12">More than 15,000</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Public Transportation:</label>
+                    <select name="pt" id="pt" required>
+                        <option value="">---How many miles do you travel each year?---</option>
+                        <option value="0">0</option>
+                        <option value="2">Less than 1,000</option>
+                        <option value="4">Between 1,000 to 10,000</option>
+                        <option value="6">Between 10,000 to 15,000</option>
+                        <option value="10">Between 15,000 to 20,000</option>
+                        <option value="12">More than 20,000</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Flights:</label>
+                    <select name="f" id="f" required>
+                        <option value="">---How far do you travel flying?---</option>
+                        <option value="0">No Flights</option>
+                        <option value="2">Short Distances (Within State)</option>
+                        <option value="6">Further Distances (Nearby State/Country)</option>
+                        <option value="20">Far Distances (Another Continent)</option>>
+                    </select>
+                </div>
+                <button type="submit">Submit</button>
+                <span id="submiterror" class="error"></span>
+            </fieldset>
+        </form>
+        <div id="tab-data"></div>
+    </body>
+</html>
